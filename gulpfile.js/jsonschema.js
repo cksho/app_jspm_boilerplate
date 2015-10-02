@@ -16,9 +16,9 @@ jsf.extend('faker', function () {
 });
 
 gulp.task('jsonschema', function () {
-        return gulp.src('src/+schema/*.js')
+        return gulp.src('src/+schema/*.json')
         .pipe(data(function (file) {
-          var filename = path.basename(file.path, '.js');
+          var filename = path.basename(file.path, '.json');
           var schemaConfig = JSON.parse(file.contents);
           fs.writeFileSync(global.path.json + filename  + '.json', JSON.stringify(jsf(schemaConfig)));
         }))

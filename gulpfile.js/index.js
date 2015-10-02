@@ -7,8 +7,8 @@ global.path = {
     scss: './src/_sass/**/*.scss',
     css: './src/css',
     js: './src/_app/**/*.js',
-    html: ['./src/_pages/*.html', './src/_component/**/*.html', './src/_layout/*.html'],
-    schema: './src/+schema/*.js',
+    html: ['./src/_pages/*.html.twig', './src/_component/**/*.html.twig', './src/_layout/*.html.twig'],
+    schema: './src/+schema/*.json',
     json: './src/json/'
 };
 

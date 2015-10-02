@@ -3,8 +3,8 @@
     "properties": {
         "jobs": {
             "type": "array",
-            "minItems": 10,
-            "maxItems": 20,
+            "minItems": 5,
+            "maxItems": 10,
             "items": {
                 "type": "object",
                 "properties": {
