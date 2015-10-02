@@ -2,7 +2,7 @@
  * Generate json files from json schemas
  * https://www.npmjs.com/package/json-schema-faker
  * http://jsonschema.net/#/
-*/
+ */
 
 var gulp = require('gulp');
 var fs = require('fs');
@@ -16,11 +16,11 @@ jsf.extend('faker', function () {
 });
 
 gulp.task('jsonschema', function () {
-        return gulp.src('src/+schema/*.json')
+    return gulp.src('src/+schema/*.json')
         .pipe(data(function (file) {
-          var filename = path.basename(file.path, '.json');
-          var schemaConfig = JSON.parse(file.contents);
-          fs.writeFileSync(global.path.json + filename  + '.json', JSON.stringify(jsf(schemaConfig)));
+            var filename = path.basename(file.path, '.json');
+            var schemaConfig = JSON.parse(file.contents);
+            fs.writeFileSync(global.path.json + filename + '.json', JSON.stringify(jsf(schemaConfig)));
         }))
         .pipe(browserSync.stream());
 });

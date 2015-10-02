@@ -1,7 +1,7 @@
 /*
  * Generate html files from nunjucks templates
  * https://mozilla.github.io/nunjucks/
-*/
+ */
 
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
@@ -30,7 +30,7 @@ gulp.task('html', function () {
                 return JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
             } else {
                 return {}
-            };
+            }
         }))
         .pipe(frontMatter({
             property: 'frontMatter',
@@ -39,7 +39,7 @@ gulp.task('html', function () {
         .pipe(nunjucks(nunjucksOpts))
         .pipe(rename({
             extname: ''
-          }))
+        }))
         .pipe(gulp.dest('src'))
         .pipe(browserSync.stream());
 });
