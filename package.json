@@ -1,0 +1,36 @@
+{
+  "name": "reborn-cms",
+  "version": "1.0.0",
+  "description": "Reborn front end boilerplate",
+  "author": "Reborn",
+  "devDependencies": {
+    "browser-sync": "^2.9.7",
+    "faker": "^3.0.1",
+    "gulp": "^3.9.0",
+    "gulp-data": "^1.2.0",
+    "gulp-front-matter": "^1.2.3",
+    "gulp-jscs": "^2.0.0",
+    "gulp-jscs-stylish": "^1.1.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-nunjucks-html": "^1.2.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "json-schema-faker": "^0.2.0",
+    "require-dir": "^0.3.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "jspm": {
+    "dependencies": {
+      "bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.5",
+      "jquery": "github:components/jquery@^2.1.4"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
