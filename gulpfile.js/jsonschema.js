@@ -1,5 +1,6 @@
 // Generate JSON files from json schemas
 // https://www.npmjs.com/package/json-schema-faker
+// http://jsonschema.net/#/
 
 var gulp = require('gulp');
 var fs = require('fs');

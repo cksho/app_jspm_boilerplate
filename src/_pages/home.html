@@ -11,10 +11,9 @@ title: 'Homepage'
       <li>{{ job.title }}</li>
     {% endfor %}
 </ul>
-
 <ul>
     {% for people in peoples %}
-      <li>{{ people.name }}</li>
+      <li>{{ people.name }} {{people.lastname}}</li>
     {% endfor %}
 </ul>
 {% endblock %}

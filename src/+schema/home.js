@@ -1,10 +1,13 @@
+// http://jsonschema.net/#/
+// http://json-schema-faker.js.org
+
 module.exports = {
     "type": "object",
     "properties": {
         "jobs": {
             "type": "array",
-            "minItems": 10,
-            "maxItems": 20,
+            "minItems": 1,
+            "maxItems": 6,
             "items": {
                 "type": "object",
                 "properties": {
@@ -12,21 +15,18 @@ module.exports = {
                         "type": "string",
                         "faker": "name.jobTitle"
                     },
-                    "type": {
+                    "position": {
                         "type": "string",
                         "faker": "name.jobType"
                     }
                 },
-                "required": [
-                    "title",
-                    "type"
-                ]
+                "required": ["title", "position"]
             }
         },
         "peoples": {
             "type": "array",
-            "minItems": 10,
-            "maxItems": 20,
+            "minItems": 1,
+            "maxItems": 3,
             "items": {
                 "type": "object",
                 "properties": {
@@ -43,11 +43,11 @@ module.exports = {
                         "faker": "internet.email"
                     }
                 },
-                "required": [
-                    "name",
-                    "email"
-                ]
+                "required": ["name", "lastname", "email"]
             }
         }
-    }
+    },
+    "required": [
+        "jobs", "peoples"
+    ]
 };
