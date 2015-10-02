@@ -19,9 +19,9 @@ gulp.task('html', function () {
             errorHandler: handleErrors
         }))
         .pipe(data(function (file) {
-            var jsonFile = './src/+data+/' + path.basename(file.path, '.html') + '.json';
+            var jsonFile = global.path.json + path.basename(file.path, '.html') + '.json';
             if (fs.existsSync(jsonFile)) {
-                return JSON.parse(fs.readFileSync(jsonFile, 'utf8'))
+                return JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
             } else {
                 return {}
             };

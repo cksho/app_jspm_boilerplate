@@ -8,7 +8,8 @@ global.path = {
     css: './src/css',
     js: './src/_app/**/*.js',
     html: ['./src/_pages/*.html', './src/_component/**/*.html', './src/_layout/*.html'],
-    json: './src/+data+/*.json'
+    schema: './src/+schema/*.js',
+    json: './src/json/'
 };
 
 // Require all tasks in gulpfile.js/tasks, including subfolders

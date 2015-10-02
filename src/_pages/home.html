@@ -5,7 +5,16 @@ title: 'Homepage'
 {% extends "_layout/base.html" %}
 {% import "_component/news/latest.html" as news %}
 {% block main %}
-    brums 333
-chrums
 
+<ul>
+    {% for job in jobs %}
+      <li>{{ job.title }}</li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for people in peoples %}
+      <li>{{ people.name }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
