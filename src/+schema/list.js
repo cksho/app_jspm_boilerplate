@@ -1,4 +1,4 @@
-module.exports = {
+{
     "type": "object",
     "properties": {
         "people": {
@@ -28,4 +28,4 @@ module.exports = {
             }
         }
     }
-};
+}

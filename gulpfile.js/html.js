@@ -1,3 +1,8 @@
+/*
+ * Generate html files from nunjucks templates
+ * https://mozilla.github.io/nunjucks/
+*/
+
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var path = require('path');

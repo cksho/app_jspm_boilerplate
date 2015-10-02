@@ -5,5 +5,5 @@ gulp.task('watch', function () {
     gulp.watch(global.path.html, ['html', browserSync.reload]);
     gulp.watch(global.path.scss, ['sass']);
     gulp.watch(global.path.js, browserSync.reload);
-    gulp.watch(global.path.schema, ['jsonschema', 'html', browserSync.reload]);
+    gulp.watch(global.path.schema, ['jsonschema', 'html', browserSync.reload]);
 });

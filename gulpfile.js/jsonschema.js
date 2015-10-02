@@ -1,13 +1,14 @@
-// Generate JSON files from json schemas
-// https://www.npmjs.com/package/json-schema-faker
-// http://jsonschema.net/#/
+/*
+ * Generate json files from json schemas
+ * https://www.npmjs.com/package/json-schema-faker
+ * http://jsonschema.net/#/
+*/
 
 var gulp = require('gulp');
 var fs = require('fs');
 var path = require('path');
-var glob = require('glob');
 var jsf = require('json-schema-faker');
-var requireDir = require('require-dir');
+var data = require('gulp-data');
 
 jsf.extend('faker', function () {
     var faker = require('faker/locale/pl');
@@ -15,13 +16,11 @@ jsf.extend('faker', function () {
 });
 
 gulp.task('jsonschema', function () {
-
-    var schemas = requireDir('../src/+schema');
-
-    for (var schema in schemas) {
-        var schemaObj = schemas[schema];
-        fs.writeFile(global.path.json + schema + '.json', JSON.stringify(jsf(schemaObj)), function (err) {
-            if (err) throw err;
-        });
-    }
+        return gulp.src('src/+schema/*.js')
+        .pipe(data(function (file) {
+          var filename = path.basename(file.path, '.js');
+          var schemaConfig = JSON.parse(file.contents);
+          fs.writeFileSync(global.path.json + filename  + '.json', JSON.stringify(jsf(schemaConfig)));
+        }))
+        .pipe(browserSync.stream());
 });
