@@ -1,3 +1,8 @@
+/*
+ * Generate CSS from SASS
+ * https://github.com/dlmanning/gulp-sass
+ */
+
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var handleErrors = require('./lib/errors');

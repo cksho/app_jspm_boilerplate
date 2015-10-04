@@ -3,18 +3,21 @@ title: 'Homepage'
 ---
 
 {% extends "_layout/base.html.twig" %}
-{% import "_component/news/latest.html.twig" as news %}
+{% include "_component/helpers/svg.html.twig" %}
+
 {% block main %}
+{{ svg('icon-fb') }}
+{{ svg('icon-tw') }}
+{{ svg('icon-yt') }}
 
-<ul>
-    {% for job in jobs %}
-      <li>{{ job.title }}</li>
-    {% endfor %}
-</ul>
+<h3>Newss list</h3>
+{% for news in newses %}
+    <div class="news" style="float:left;width: 100%;">
+      <h3>{{ news.title }}</h3>
+      <div>{{ news.date }}</div>
+      <img src="{{ news.image }}" width="200" alt="{{ news.title }}">
+      <p>{{ news.desc|truncate(50) }}</p>
+    </div>
+{% endfor %}
 
-<ul>
-    {% for people in peoples %}
-      <li>{{ people.name }} {{people.lastname}}</li>
-    {% endfor %}
-</ul>
 {% endblock %}

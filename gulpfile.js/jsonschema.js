@@ -16,7 +16,7 @@ jsf.extend('faker', function () {
 });
 
 gulp.task('jsonschema', function () {
-    return gulp.src('src/+schema/*.json')
+    return gulp.src('src/_schema/*.json')
         .pipe(data(function (file) {
             var filename = path.basename(file.path, '.json');
             var schemaConfig = JSON.parse(file.contents);

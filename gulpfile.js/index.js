@@ -1,3 +1,8 @@
+/*
+ * Gulp config
+ *
+ */
+
 var requireDir = require('require-dir')
 global.browserSync = require('browser-sync').create();
 
@@ -8,7 +13,7 @@ global.path = {
     css: './src/css',
     js: './src/_app/**/*.js',
     html: ['./src/_pages/*.html.twig', './src/_component/**/*.html.twig', './src/_layout/*.html.twig'],
-    schema: './src/+schema/*.json',
+    schema: './src/_schema/*.json',
     json: './src/json/'
 };
 

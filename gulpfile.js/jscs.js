@@ -1,3 +1,8 @@
+/*
+ * JavaScript code style checker
+ * https://github.com/jscs-dev/gulp-jscs/
+ */
+
 var gulp = require('gulp');
 var jscs = require('gulp-jscs');
 

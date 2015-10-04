@@ -1,3 +1,8 @@
+/*
+ * Init Browsersync static files server
+ * http://www.browsersync.io/
+ */
+
 var gulp = require('gulp');
 
 // SERVER

@@ -1,3 +1,8 @@
+/*
+ * Build task
+ *
+ */
+
 var gulp = require('gulp');
 var exec = require('child_process').execSync;
 

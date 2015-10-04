@@ -11,6 +11,7 @@
     "gulp-data": "^1.2.0",
     "gulp-exec": "^2.1.2",
     "gulp-front-matter": "^1.2.3",
+    "gulp-imagemin": "^2.3.0",
     "gulp-jscs": "^2.0.0",
     "gulp-jscs-stylish": "^1.1.2",
     "gulp-notify": "^2.2.0",

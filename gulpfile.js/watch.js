@@ -1,3 +1,8 @@
+/*
+ * Gulp watch task
+ * https://github.com/gulpjs/gulp/blob/master/docs/API.md
+ */
+
 var gulp = require('gulp');
 
 gulp.task('watch', function () {

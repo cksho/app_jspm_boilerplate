@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 class Car {
     constructor(options) {
         this.model = options.model;

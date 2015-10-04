@@ -3,8 +3,8 @@
     "properties": {
         "jobs": {
             "type": "array",
-            "minItems": 5,
-            "maxItems": 10,
+            "minItems": 2,
+            "maxItems": 2,
             "items": {
                 "type": "object",
                 "properties": {
@@ -16,27 +16,31 @@
                 "required": ["title"]
             }
         },
-        "peoples": {
+        "newses": {
             "type": "array",
-            "minItems": 10,
-            "maxItems": 20,
+            "minItems": 5,
+            "maxItems": 6,
             "items": {
                 "type": "object",
                 "properties": {
-                    "name": {
+                    "title": {
                         "type": "string",
-                        "faker": "name.firstName"
+                        "faker": "lorem.words"
                     },
-                    "lastname": {
+                    "image": {
                         "type": "string",
-                        "faker": "name.lastName"
+                        "faker": "image.image"
                     },
-                    "email": {
+                    "desc": {
                         "type": "string",
-                        "faker": "internet.email"
+                        "faker": "lorem.paragraphs"
+                    },
+                    "date": {
+                        "type": "string",
+                        "faker": "date.future"
                     }
                 },
-                "required": ["name", "lastname", "email"]
+                "required": ["title", "image", "desc", "date"]
             }
         }
     },
