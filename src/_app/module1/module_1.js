@@ -44,4 +44,8 @@ class Car {
 }
 
 
-export default Car;
+function randomFunc() {
+    console.log('random function');
+}
+
+export {Car, randomFunc};

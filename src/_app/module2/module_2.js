@@ -1,3 +1,3 @@
 export default function() {
-  return console.log('Jestem modułem nr 3');
+  return console.log('Jestem modułem nr 2');
 }
