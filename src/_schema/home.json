@@ -18,8 +18,8 @@
         },
         "newses": {
             "type": "array",
-            "minItems": 5,
-            "maxItems": 6,
+            "minItems": 1,
+            "maxItems": 1,
             "items": {
                 "type": "object",
                 "properties": {
@@ -45,6 +45,6 @@
         }
     },
     "required": [
-        "jobs", "peoples"
+        "jobs", "newses"
     ]
 }

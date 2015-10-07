@@ -7,7 +7,7 @@ class Car {
     }
 
     drive(speed) {
-        return console.log(`im driving with the speed of ${speed}`);
+        return console.log(`im driving withthe speed of ${speed}`);
     }
 
     honk() {
