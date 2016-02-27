@@ -4,14 +4,15 @@
  */
 
 var gulp = require('gulp');
+var gulpSequence = require('gulp-sequence');
 
-// SERVER
-gulp.task('serve', ['html', 'sass', 'watch'], function () {
+gulp.task('startBrowserSync', function () {
     return browserSync.init({
         server: {
             baseDir: global.path.src,
             routes: {
                 '/jspm_packages': './jspm_packages',
+                '/jspm_packages/': './jspm_packages/',
                 '/vendor': './'
             },
         },
@@ -20,3 +21,5 @@ gulp.task('serve', ['html', 'sass', 'watch'], function () {
         notify: true
     });
 });
+
+gulp.task('serve', gulpSequence('html', 'sass', 'watch', 'startBrowserSync'));

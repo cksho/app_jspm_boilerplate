@@ -1,39 +1,38 @@
 {
-  "name": "reborn-cms",
+  "name": "reborn-fe-boilerplate",
   "version": "1.0.0",
-  "description": "Reborn front end boilerplate",
+  "description": "Reborn frontend boilerplate",
   "author": "Reborn",
   "devDependencies": {
-    "browser-sync": "^2.9.7",
+    "babel-eslint": "^5.0.0",
+    "browser-sync": "^2.11.1",
+    "del": "^2.0.2",
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.0.2",
     "faker": "^3.0.1",
-    "glob": "^5.0.15",
-    "gulp": "^3.9.0",
+    "glob": "^7.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "^0.3.1",
     "gulp-data": "^1.2.0",
     "gulp-exec": "^2.1.2",
-    "gulp-front-matter": "^1.2.3",
+    "gulp-front-matter": "^1.3.0",
     "gulp-imagemin": "^2.3.0",
-    "gulp-jscs": "^2.0.0",
-    "gulp-jscs-stylish": "^1.1.2",
     "gulp-notify": "^2.2.0",
-    "gulp-nunjucks-html": "^1.2.2",
+    "gulp-nunjucks-html": "^2.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.4",
-    "gulp-shell": "^0.4.3",
+    "gulp-sass": "^2.2.0",
+    "gulp-sequence": "^0.4.1",
+    "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.5.2",
-    "json-schema-faker": "^0.2.0",
+    "json-schema-faker": "^0.2.11",
     "require-dir": "^0.3.0"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=4.0.0"
   },
   "jspm": {
-    "dependencies": {
-      "bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.5",
-      "jquery": "github:components/jquery@^2.1.4",
-      "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
-      "react": "npm:react@^0.13.3"
-    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",

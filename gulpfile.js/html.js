@@ -15,8 +15,14 @@ var data = require('gulp-data');
 var rename = require("gulp-rename");
 
 var nunjucksOpts = {
-    searchPaths: [global.path.src]
-};
+    searchPaths: [global.path.src],
+    setUp: function(env) {
+      env.addFilter('greet', function(name) {
+        return 'Hello ' + name;
+      });
+      return env;
+
+}}
 
 // Nunjucks to HTML template
 gulp.task('html', function () {

@@ -32,82 +32,81 @@ $alert-warn-font: #c19b2b;
 
 // alert styles
 %alert-success {
-	background-color: $alert-success-bg;
-	border-color: $alert-success-border;
-	color: $alert-success-font;
+  background-color: $alert-success-bg;
+  border-color: $alert-success-border;
+  color: $alert-success-font;
 }
 
 %alert-error {
-	background-color: $alert-error-bg;
-	border-color: $alert-error-border;
-	color: $alert-error-font;
+  background-color: $alert-error-bg;
+  border-color: $alert-error-border;
+  color: $alert-error-font;
 }
 
 %alert-warn {
-	background-color: $alert-warn-bg;
-	border-color: $alert-warn-border;
-	color: $alert-warn-font;
+  background-color: $alert-warn-bg;
+  border-color: $alert-warn-border;
+  color: $alert-warn-font;
 }
 
 // notification styles
 %notif-success-icon {
-	fill: $alert-success-font;
+  fill: $alert-success-font;
 }
 
 %notif-error-icon {
-	fill: $alert-error-font;
+  fill: $alert-error-font;
 }
 
 %notif-warn-icon {
-	fill: $alert-warn-font;
+  fill: $alert-warn-font;
 }
 
 // status styles
 %status-success {
-	color: $alert-success-font;
+  color: $alert-success-font;
 }
 
 %status-error {
-	color: $alert-error-font;
+  color: $alert-error-font;
 }
 
 %status-warn {
-	color: $alert-warn-font;
+  color: $alert-warn-font;
 }
 
 // *** settings ***
 .alert {
-	padding: 20px;
-    clear: both;
+  padding: 20px;
+  clear: both;
 }
 
 .alert__box {
-	height: 50px;
-	line-height: 50px;
-	padding: 0 20px;
-	border-width: 1px;
-	border-style: solid;
-    border-radius: 4px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
 }
 
-
 @each $type in $alert-types {
-	.alert--#{$type} {
-		@extend .alert;
-		.alert__icon {
-			position: relative;
-			top: -2px;
-			display: inline-block;
-			width: 15px;
-			height: 15px;
-			margin-right: 10px;
-			background: url(../images/svg/alert-#{$type}.svg) no-repeat;
-			vertical-align: middle;
-		}
-		.alert__box {
-			@extend %alert-#{$type};
-		}
-	}
+  .alert--#{$type} {
+    @extend .alert;
+    .alert__icon {
+      position: relative;
+      top: -2px;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      background: url(../images/svg/alert-#{$type}.svg) no-repeat;
+      vertical-align: middle;
+    }
+    .alert__box {
+      @extend %alert-#{$type};
+    }
+  }
 }
 
 //=============================
@@ -119,9 +118,9 @@ $notification-easing-in: cubic-bezier(0.215, 0.61, 0.355, 1);
 $notification-easing-out: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
 .notification-wrap {
-	position: absolute;
-	top: 0;
-	right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 // .notification {
@@ -140,58 +139,58 @@ $notification-easing-out: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 // }
 
 .notification {
-	@include drop-shadow-right-down(3px, rgba(0, 0, 0, 0.06));
-	position: fixed;
-	top: 0;
-	right: 10px;
-	z-index: 99;
-	width: 340px;
-	height: 90px;
-	line-height: 90px;
-	border-width: 1px;
-	border-style: solid;
-	visibility: hidden;
-	transition: top $notification-duration $notification-easing-out, opacity 0.2s $notification-easing-out;
+  @include drop-shadow-right-down(3px, rgba(0, 0, 0, 0.06));
+  position: fixed;
+  top: 0;
+  right: 10px;
+  z-index: 99;
+  width: 340px;
+  height: 90px;
+  line-height: 90px;
+  border-width: 1px;
+  border-style: solid;
+  visibility: hidden;
+  transition: top $notification-duration $notification-easing-out, opacity 0.2s $notification-easing-out;
 }
 
 .notification__button {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: 15px;
-	height: 15px;
-	i {
-		display: block;
-		background: url(../images/svg/notif-close.svg) no-repeat;
-		width: 15px;
-		height: 15px;
-	}
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  i {
+    display: block;
+    background: url(../images/svg/notif-close.svg) no-repeat;
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .notification__msg {
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0;
-	padding-left: 100px;
-	line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding-left: 100px;
+  line-height: normal;
 }
 
 .notification.is-active {
-	right: 0;
-	transition: right $notification-duration $notification-easing-in;
+  right: 0;
+  transition: right $notification-duration $notification-easing-in;
 }
 
 @each $type in $alert-types {
-	.notification.is-#{$type} {
-		@extend .notification;
-		@extend %alert-#{$type};
-		background-image: url(../images/svg/notif-bg-#{$type}.svg);
-		background-repeat: no-repeat;
-		background-position: bottom left;
-		.notification__button i path {
-			@extend %notif-#{$type}-icon;
-		}
-	}
+  .notification.is-#{$type} {
+    @extend .notification;
+    @extend %alert-#{$type};
+    background-image: url(../images/svg/notif-bg-#{$type}.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    .notification__button i path {
+      @extend %notif-#{$type}-icon;
+    }
+  }
 }
 
 //=============================
@@ -199,9 +198,9 @@ $notification-easing-out: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 //=============================
 
 @each $type in $alert-types {
-	.status-#{$type} {
-		@extend %status-#{$type};
-		padding-left: 23px;
-		background: url(../images/svg/alert-#{$type}.svg) no-repeat left center;
-	}
+  .status-#{$type} {
+    @extend %status-#{$type};
+    padding-left: 23px;
+    background: url(../images/svg/alert-#{$type}.svg) no-repeat left center;
+  }
 }
