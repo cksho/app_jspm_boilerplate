@@ -61,7 +61,7 @@ gulp.task('buildcss', function () {
 
 // Build JS for distribution.
 gulp.task('buildjs', function () {
-    exec('jspm bundle-sfx src/_app/index.js dist/scripts/app.min.js --minify --skip-source-maps', function (err, stdout, stderr) {
+    exec('jspm bundle-sfx src/_app/app.js dist/scripts/app.min.js --minify --skip-source-maps', function (err, stdout, stderr) {
         if (err) {
             throw err;
         }
